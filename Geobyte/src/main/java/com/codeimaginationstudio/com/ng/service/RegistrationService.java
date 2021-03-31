@@ -1,0 +1,29 @@
+package com.codeimaginationstudio.com.ng.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.codeimaginationstudio.com.ng.model.User;
+import com.codeimaginationstudio.com.ng.repository.RegistrationRepository;
+
+@Service
+public class RegistrationService {
+	
+	@Autowired
+	private RegistrationRepository repo;
+	
+	//saving the users information to the database
+	public User saveUser(User user) {
+		
+		return repo.save(user);
+		
+	}
+	
+	//check if user exist and return user
+	public User fetchUsersByEmailId(String email) {
+		
+		return repo.findByEmailId(email);
+		
+	}
+
+}
