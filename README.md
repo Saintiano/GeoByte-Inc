@@ -11,7 +11,7 @@
 
 5. Web Services for Angular 8 integration
 
-Endpoint for user registrations
+Endpoint for user registrations and login
 
 http://localhost:8080/registeruser
 create a user using postman
@@ -21,6 +21,16 @@ create a user using postman
 	"emailId": "Okonkwoclovis@gmail.com",
 	"userName": "clovisaintiano",
 	"password": "chisom"
+	
+}
+http://localhost:8080/login
+login user using postman
+
+{
+
+
+	"emailId": "clovisOkonkwo@gmail.com",
+	"password": "chisom1"
 	
 }
 
