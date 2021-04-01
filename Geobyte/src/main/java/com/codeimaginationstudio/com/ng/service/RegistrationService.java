@@ -19,11 +19,18 @@ public class RegistrationService {
 		
 	}
 	
-	//check if user exist and return user
+	//fetch user email
 	public User fetchUsersByEmailId(String email) {
 		
 		return repo.findByEmailId(email);
 		
+	}
+	
+	//fetch user email and password
+	public User fetchUsersByEmailIdAndPassword(String email, String password) {
+			
+		return repo.findByEmailIdAndPassword(email, password);
+			
 	}
 
 }
